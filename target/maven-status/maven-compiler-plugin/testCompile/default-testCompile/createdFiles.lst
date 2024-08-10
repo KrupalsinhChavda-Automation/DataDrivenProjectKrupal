@@ -1,0 +1,9 @@
+com\kbc\testcases\OpenAccountTest.class
+com\kbc\rough\TestProperties.class
+com\kbc\testcases\BankManagerLoginTest.class
+com\kbc\base\TestBase.class
+com\kbc\utilities\TestUtil.class
+com\kbc\listeners\CustomListeners.class
+com\kbc\testcases\AddCustomerTest.class
+com\kbc\utilities\ExtentManager.class
+com\kbc\utilities\ExcelReader.class

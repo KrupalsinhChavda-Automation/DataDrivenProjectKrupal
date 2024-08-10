@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Add Cutomer Test"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="6.323">
+  <properties />
+  
+  
+            <testcase name="addCustomerTest" time="1.258" classname="com.kbc.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="2.585" classname="com.kbc.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="1.226" classname="com.kbc.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="1.254" classname="com.kbc.testcases.AddCustomerTest" />
+      
+</testsuite>
