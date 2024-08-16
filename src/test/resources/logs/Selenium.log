@@ -1,14 +1,14 @@
-08:42:45,250 DEBUG devpinoyLogger:64 - Config file loaded!!!
-08:42:45,251 DEBUG devpinoyLogger:78 - OR file loaded!!!
-08:42:51,403 DEBUG devpinoyLogger:103 - Navigated to: https://www.way2automation.com/angularjs-protractor/banking/#/login
-08:42:51,890 DEBUG devpinoyLogger:21 - Lunching the login test
-08:42:52,100 DEBUG devpinoyLogger:26 - Login Successfully!!
-08:42:53,232 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
-08:42:53,283 DEBUG devpinoyLogger:63 - Customer has been added
-08:42:53,976 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
-08:42:54,015 DEBUG devpinoyLogger:63 - Customer has been added
-08:42:54,761 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
-08:42:54,799 DEBUG devpinoyLogger:63 - Customer has been added
-08:42:55,543 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
-08:42:55,594 DEBUG devpinoyLogger:63 - Customer has been added
-08:42:59,704 DEBUG devpinoyLogger:180 - Test Execution completed
+19:38:30,185 DEBUG devpinoyLogger:64 - Config file loaded!!!
+19:38:30,188 DEBUG devpinoyLogger:78 - OR file loaded!!!
+19:38:34,557 DEBUG devpinoyLogger:103 - Navigated to: https://www.way2automation.com/angularjs-protractor/banking/#/login
+19:38:34,941 DEBUG devpinoyLogger:21 - Lunching the login test
+19:38:35,105 DEBUG devpinoyLogger:26 - Login Successfully!!
+19:38:35,797 DEBUG devpinoyLogger:56 - Customer has been added and verified over the alert
+19:38:35,815 DEBUG devpinoyLogger:64 - Customer has been added
+19:38:36,222 DEBUG devpinoyLogger:56 - Customer has been added and verified over the alert
+19:38:36,249 DEBUG devpinoyLogger:64 - Customer has been added
+19:38:36,641 DEBUG devpinoyLogger:56 - Customer has been added and verified over the alert
+19:38:36,664 DEBUG devpinoyLogger:64 - Customer has been added
+19:38:37,096 DEBUG devpinoyLogger:56 - Customer has been added and verified over the alert
+19:38:37,115 DEBUG devpinoyLogger:64 - Customer has been added
+19:38:39,113 DEBUG devpinoyLogger:180 - Test Execution completed
