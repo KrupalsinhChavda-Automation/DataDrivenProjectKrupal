@@ -2,8 +2,10 @@ K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\DataDrivenFramework\s
 K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\DataDrivenFramework\src\test\java\com\kbc\listeners\CustomListeners.java
 K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\DataDrivenFramework\src\test\java\com\kbc\utilities\TestUtil.java
 K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\DataDrivenFramework\src\test\java\com\kbc\utilities\ExcelReader.java
+K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\DataDrivenFramework\src\test\java\com\kbc\utilities\MonitoringMail.java
 K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\DataDrivenFramework\src\test\java\com\kbc\rough\TestProperties.java
 K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\DataDrivenFramework\src\test\java\com\kbc\testcases\BankManagerLoginTest.java
 K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\DataDrivenFramework\src\test\java\com\kbc\testcases\OpenAccountTest.java
 K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\DataDrivenFramework\src\test\java\com\kbc\base\TestBase.java
 K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\DataDrivenFramework\src\test\java\com\kbc\utilities\ExtentManager.java
+K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\DataDrivenFramework\src\test\java\com\kbc\utilities\TestConfig.java

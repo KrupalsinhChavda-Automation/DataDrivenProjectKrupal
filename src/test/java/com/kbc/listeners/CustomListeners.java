@@ -1,9 +1,15 @@
 package com.kbc.listeners;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Date;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+
+import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -20,6 +26,8 @@ import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.kbc.base.TestBase;
 import com.kbc.utilities.ExtentManager;
+import com.kbc.utilities.MonitoringMail;
+import com.kbc.utilities.TestConfig;
 import com.kbc.utilities.TestUtil;
 
 public class CustomListeners extends TestBase implements ITestListener, ISuiteListener {
@@ -102,19 +110,21 @@ public class CustomListeners extends TestBase implements ITestListener, ISuiteLi
 		testReport.get().log(Status.FAIL, m);
 
 	}
+
 	public static String skippedTests;
+
 	public void onTestSkipped(ITestResult result) {
 		String methodName = result.getMethod().getMethodName();
 		String logText = "<b>" + "Test Case:- " + methodName + " Skipped" + "</b>";
-		
+
 		if (!TestUtil.isTestRunnable(result.getName(), excel)) {
-			 skippedTests= "<b>" + "Skipping the test case " + result.getName().toUpperCase() + " as the run mode is No" + "</b>";
-			 Markup m1 = MarkupHelper.createLabel(skippedTests, ExtentColor.INDIGO);
-			 testReport.get().skip(m1);
+			skippedTests = "<b>" + "Skipping the test case " + result.getName().toUpperCase() + " as the run mode is No"
+					+ "</b>";
+			Markup m1 = MarkupHelper.createLabel(skippedTests, ExtentColor.INDIGO);
+			testReport.get().skip(m1);
 		}
 		Markup m = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
 		testReport.get().skip(m);
-		
 
 	}
 
@@ -134,6 +144,28 @@ public class CustomListeners extends TestBase implements ITestListener, ISuiteLi
 			extent.flush();
 		}
 
+	}
+
+	public void onFinish(ISuite arg0) {
+		MonitoringMail mail = new MonitoringMail();
+		try {
+			messageBody = "http://" + InetAddress.getLocalHost().getHostAddress()
+					+ ":8080/job/DataDrivenLiveProject/Extents_20Report/";
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(messageBody);
+
+		try {
+			mail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject, messageBody);
+		} catch (AddressException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MessagingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

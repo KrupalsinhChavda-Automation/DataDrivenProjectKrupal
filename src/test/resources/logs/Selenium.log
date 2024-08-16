@@ -1,15 +1,14 @@
-12:35:12,459 DEBUG devpinoyLogger:63 - Config file loaded!!!
-12:35:12,464 DEBUG devpinoyLogger:77 - OR file loaded!!!
-12:35:15,900 DEBUG devpinoyLogger:85 - Chrome lounched
-12:35:16,548 DEBUG devpinoyLogger:92 - Navigated to: https://www.way2automation.com/angularjs-protractor/banking/#/login
-12:35:16,797 DEBUG devpinoyLogger:21 - Lunching the login test
-12:35:17,082 DEBUG devpinoyLogger:26 - Login Successfully!!
-12:35:21,654 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
-12:35:21,712 DEBUG devpinoyLogger:63 - Customer has been added
-12:35:22,951 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
-12:35:22,975 DEBUG devpinoyLogger:63 - Customer has been added
-12:35:24,166 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
-12:35:24,205 DEBUG devpinoyLogger:63 - Customer has been added
-12:35:25,443 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
-12:35:25,465 DEBUG devpinoyLogger:63 - Customer has been added
-12:35:27,500 DEBUG devpinoyLogger:169 - Test Execution completed
+08:42:45,250 DEBUG devpinoyLogger:64 - Config file loaded!!!
+08:42:45,251 DEBUG devpinoyLogger:78 - OR file loaded!!!
+08:42:51,403 DEBUG devpinoyLogger:103 - Navigated to: https://www.way2automation.com/angularjs-protractor/banking/#/login
+08:42:51,890 DEBUG devpinoyLogger:21 - Lunching the login test
+08:42:52,100 DEBUG devpinoyLogger:26 - Login Successfully!!
+08:42:53,232 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
+08:42:53,283 DEBUG devpinoyLogger:63 - Customer has been added
+08:42:53,976 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
+08:42:54,015 DEBUG devpinoyLogger:63 - Customer has been added
+08:42:54,761 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
+08:42:54,799 DEBUG devpinoyLogger:63 - Customer has been added
+08:42:55,543 DEBUG devpinoyLogger:55 - Customer has been added and verified over the alert
+08:42:55,594 DEBUG devpinoyLogger:63 - Customer has been added
+08:42:59,704 DEBUG devpinoyLogger:180 - Test Execution completed

@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.952">
+           time="1.157">
   <properties />
   
   
-            <testcase name="openAccountTest" time="0.952" classname="com.kbc.testcases.OpenAccountTest" />
+            <testcase name="openAccountTest" time="1.157" classname="com.kbc.testcases.OpenAccountTest" />
       
 </testsuite>

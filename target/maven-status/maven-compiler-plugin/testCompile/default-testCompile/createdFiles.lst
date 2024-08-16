@@ -1,9 +1,13 @@
-com\kbc\testcases\OpenAccountTest.class
 com\kbc\rough\TestProperties.class
 com\kbc\testcases\BankManagerLoginTest.class
+com\kbc\utilities\MonitoringMail$1.class
 com\kbc\base\TestBase.class
-com\kbc\utilities\TestUtil.class
 com\kbc\listeners\CustomListeners.class
 com\kbc\testcases\AddCustomerTest.class
 com\kbc\utilities\ExtentManager.class
 com\kbc\utilities\ExcelReader.class
+com\kbc\utilities\MonitoringMail.class
+com\kbc\testcases\OpenAccountTest.class
+com\kbc\utilities\MonitoringMail$SMTPAuthenticator.class
+com\kbc\utilities\TestUtil.class
+com\kbc\utilities\TestConfig.class

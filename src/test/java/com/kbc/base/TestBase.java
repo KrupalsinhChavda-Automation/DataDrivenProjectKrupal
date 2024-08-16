@@ -45,6 +45,7 @@ public class TestBase {
 	public static ExcelReader excel = new ExcelReader(
 			System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\testdata.xlsx");
 	public static WebDriverWait wait;
+	public static String browser;
 
 	@BeforeSuite
 	public void setup() {
@@ -79,11 +80,21 @@ public class TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			
+			if(System.getenv("browser")!=null && !System.getenv("browser").isEmpty()) {
+				
+				browser = System.getenv("browser");
+			}else {
+				browser = config.getProperty("browser");
+			}
+			
+			config.setProperty("browser", browser);
 
 			if (config.getProperty("browser").equals("chrome")) {
 				driver = new ChromeDriver();
 				log.debug("Chrome lounched");
-			} else if (config.getProperty("browser") == "firefox") {
+			} else if (config.getProperty("browser").equals("firefox")) {
 
 				driver = new FirefoxDriver();
 			}
