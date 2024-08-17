@@ -23,9 +23,8 @@ public class TestUtil extends TestBase {
 	public static String screenshotPath;
 	public static String screenshotName;
 
+	/* Defining the capture screenshot code to use it for failed Test cases to show the failure result */
 	public static void captureScreenshot() throws IOException {
-
-		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 		Date d = new Date();
 		screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
@@ -37,7 +36,9 @@ public class TestUtil extends TestBase {
 		dest.getParentFile().mkdirs();
 		FileHandler.copy(screenshot, dest);
 	}
-
+	
+	
+	/* Defining the data provider code at one place to use it all over the project */
 	@DataProvider(name = "dp")
 	public Object[][] getData(Method m) {
 		String sheetName = m.getName();
@@ -70,6 +71,7 @@ public class TestUtil extends TestBase {
 		return data;
 	}
 
+	/* Code for the run Mode as we set in the excel which test case to run */
 	public static boolean isTestRunnable(String testName, ExcelReader excel) {
 
 		String sheetName = "test_suite";
