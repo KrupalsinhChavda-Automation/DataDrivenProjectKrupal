@@ -32,8 +32,8 @@ public class TestBase {
 
 	/*
 	 * Need to Initialize WebDriver Properties Logs - log4j jar, .log,
-	 * log4j2.properties, Logger Excel - excelReader, data provider Report NG
-	 * ExtentRports DB Mail , Extent Reports Jenkins
+	 * log4j2.properties, Logger Excel - excelReader, data provider Report NG DB
+	 * Mail , Extent Reports Jenkins
 	 * 
 	 */
 
@@ -46,6 +46,105 @@ public class TestBase {
 			System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\testdata.xlsx");
 	public static WebDriverWait wait;
 	public static String browser;
+
+	/* Reusable Keywords Click() */
+	public static void click(String locatorKey) {
+		try {
+			driver.findElement(By.xpath(OR.getProperty(locatorKey))).click();
+			log.info("Clicking on an Element : " + locatorKey);
+			CustomListeners.test.log(Status.INFO, "Clicking on an Element : " + locatorKey);
+		} catch (Throwable t) {
+
+			log.error("Error while Clicking on an Element : " + locatorKey + " error message : " + t.getMessage());
+			CustomListeners.test.log(Status.FAIL,
+					"Error while Clicking on an Element : " + locatorKey + " error message : " + t.getMessage());
+			Assert.fail(t.getMessage());
+
+		}
+
+	}
+
+	/* Reusable Keywords setText() */
+	public void setText(String locator, String settext) {
+		try {
+			driver.findElement(By.xpath(OR.getProperty(locator))).sendKeys(settext);
+			log.info("Typing in : " + locator + " entered value as " + settext);
+			CustomListeners.testReport.get().log(Status.INFO,
+					"Typing in : " + locator + " entered value as " + settext);
+		} catch (Throwable t) {
+
+			log.error("Error while typing on an Element: " + settext + " error message : " + t.getMessage());
+			CustomListeners.test.log(Status.FAIL,
+					"Error while typing on an Element: " + settext + " error message : " + t.getMessage());
+		}
+	}
+
+	/* Reusable Keywords selectByVisibleText() */
+	public WebElement dropdown;
+
+	public void select(String locator, String value) {
+
+		try {
+		dropdown = driver.findElement(By.xpath(OR.getProperty(locator)));
+
+		Select select = new Select(dropdown);
+		select.selectByVisibleText(value);
+		log.info("Selecting the dropdown value from : " + locator + " entered value as " + value);
+		CustomListeners.testReport.get().log(Status.INFO,
+				"Selecting the dropdown value from : " + locator + " entered value as " + value);
+		}catch(Throwable t) {
+			
+			log.error("Error selecting the dropdown value from an Element: " + value + " error message : " + t.getMessage());
+			CustomListeners.test.log(Status.FAIL,
+					"Error selecting the dropdown value from an Element: " + value + " error message : " + t.getMessage());
+		}
+	}
+
+	public boolean isElementPresent(By by) {
+
+		try {
+			driver.findElement(by);
+			log.info("Element is present : " + by );
+			CustomListeners.testReport.get().log(Status.INFO,
+					"Element is present : " + by );
+			return true;
+
+		} catch (NoSuchElementException e) {
+
+			log.error("Element is not present : " + by + " error message : " + e.getMessage());
+			CustomListeners.test.log(Status.FAIL,
+					"Element is not present : " + by + " error message : " + e.getMessage());
+			return false;
+		}
+	}
+
+	public static void verifyEquals(String expected, String actual) throws IOException {
+
+		try {
+
+			Assert.assertEquals(actual, expected);
+
+		} catch (Throwable t) {
+
+			TestUtil.captureScreenshot();
+			// ReportNG
+			String ScreenPath = System.getProperty("user.dir") + "\\target\\extent_reports\\screenshot\\"
+					+ TestUtil.screenshotName;
+			Reporter.log("<br>" + "Verification failure : " + t.getMessage() + "<br>");
+			Reporter.log("<a target=\"_blank\" href=" + ScreenPath + "><img src=" + ScreenPath
+					+ " height=200 width=200></img></a>");
+			Reporter.log("<br>");
+			Reporter.log("<br>");
+			// Extent Reports
+
+			CustomListeners.testReport.get().log(Status.FAIL,
+					" Verification failed with exception : " + t.getMessage());
+			CustomListeners.testReport.get().fail(
+					"<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
+					MediaEntityBuilder.createScreenCaptureFromPath(ScreenPath).build());
+		}
+
+	}
 
 	@BeforeSuite
 	public void setup() {
@@ -80,17 +179,18 @@ public class TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			
-			if(System.getenv("browser")!=null && !System.getenv("browser").isEmpty()) {
-				
+
+			// For Jenkins logic
+			if (System.getenv("browser") != null && !System.getenv("browser").isEmpty()) {
+
 				browser = System.getenv("browser");
-			}else {
+			} else {
 				browser = config.getProperty("browser");
 			}
-			
+
 			config.setProperty("browser", browser);
 
+			// Browser selection
 			if (config.getProperty("browser").equals("chrome")) {
 				driver = new ChromeDriver();
 				log.debug("Chrome lounched");
@@ -102,71 +202,9 @@ public class TestBase {
 			driver.get(config.getProperty("testurl"));
 			log.debug("Navigated to: " + config.getProperty("testurl"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implict.wait")),
-					TimeUnit.SECONDS);
+			driver.manage().timeouts()
+					.implicitlyWait(Duration.ofSeconds(Integer.parseInt(config.getProperty("expict_wait"))));
 			wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.parseInt(config.getProperty("expict_wait"))));
-		}
-
-	}
-
-	public void click(String locator) {
-
-		driver.findElement(By.xpath(OR.getProperty(locator))).click();
-		CustomListeners.testReport.get().log(Status.INFO, "Clicking on : " + locator);
-
-	}
-
-	public void setText(String locator, String settext) {
-
-		driver.findElement(By.xpath(OR.getProperty(locator))).sendKeys(settext);
-		CustomListeners.testReport.get().log(Status.INFO, "Typing in : " + locator + " entered value as " + settext);
-	}
-	
-	public WebElement dropdown;
-	public void select(String locator, String value) {
-		
-		dropdown= driver.findElement(By.xpath(OR.getProperty(locator)));
-		
-		Select select = new Select(dropdown);
-		select.selectByVisibleText(value);
-	}
-
-	public boolean isElementPresent(By by) {
-
-		try {
-			driver.findElement(by);
-			return true;
-
-		} catch (NoSuchElementException e) {
-
-			return false;
-		}
-	}
-
-	public static void verifyEquals(String expected, String actual) throws IOException {
-
-		try {
-
-			Assert.assertEquals(actual, expected);
-
-		} catch (Throwable t) {
-
-			TestUtil.captureScreenshot();
-			// ReportNG
-			String ScreenPath = System.getProperty("user.dir") + "\\target\\extent_reports\\screenshot\\" + TestUtil.screenshotName;
-			Reporter.log("<br>" + "Verification failure : " + t.getMessage() + "<br>");
-			Reporter.log("<a target=\"_blank\" href=" + ScreenPath + "><img src=" + ScreenPath
-					+ " height=200 width=200></img></a>");
-			Reporter.log("<br>");
-			Reporter.log("<br>");
-			// Extent Reports
-			
-			CustomListeners.testReport.get().log(Status.FAIL,
-					" Verification failed with exception : " + t.getMessage());
-			CustomListeners.testReport.get().fail(
-					"<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
-					MediaEntityBuilder.createScreenCaptureFromPath(ScreenPath).build());
-
 		}
 
 	}
