@@ -1,14 +1,41 @@
-16/08/2024 19:38:30 devpinoyLogger Config file loaded!!!
-16/08/2024 19:38:30 devpinoyLogger OR file loaded!!!
-16/08/2024 19:38:34 devpinoyLogger Navigated to: https://www.way2automation.com/angularjs-protractor/banking/#/login
-16/08/2024 19:38:34 devpinoyLogger Lunching the login test
-16/08/2024 19:38:35 devpinoyLogger Login Successfully!!
-16/08/2024 19:38:35 devpinoyLogger Customer has been added and verified over the alert
-16/08/2024 19:38:35 devpinoyLogger Customer has been added
-16/08/2024 19:38:36 devpinoyLogger Customer has been added and verified over the alert
-16/08/2024 19:38:36 devpinoyLogger Customer has been added
-16/08/2024 19:38:36 devpinoyLogger Customer has been added and verified over the alert
-16/08/2024 19:38:36 devpinoyLogger Customer has been added
-16/08/2024 19:38:37 devpinoyLogger Customer has been added and verified over the alert
-16/08/2024 19:38:37 devpinoyLogger Customer has been added
-16/08/2024 19:38:39 devpinoyLogger Test Execution completed
+07/09/2024 09:48:16 devpinoyLogger Config file loaded!!!
+07/09/2024 09:48:16 devpinoyLogger OR file loaded!!!
+07/09/2024 09:48:17 devpinoyLogger Chrome lounched
+07/09/2024 09:48:18 devpinoyLogger Navigated to: https://www.way2automation.com/angularjs-protractor/banking/#/login
+07/09/2024 09:48:18 devpinoyLogger Lunching the login test
+07/09/2024 09:48:18 devpinoyLogger Clicking on an Element : btn_Login
+07/09/2024 09:48:18 devpinoyLogger Element is present : By.xpath: //button[@ng-class='btnClass1']
+07/09/2024 09:48:18 devpinoyLogger Login Successfully!!
+07/09/2024 09:48:19 devpinoyLogger Clicking on an Element : btn_AddCustomer
+07/09/2024 09:48:20 devpinoyLogger Typing in : txt_FirstName entered value as Krupal
+07/09/2024 09:48:20 devpinoyLogger Typing in : txt_LastName entered value as Chavda
+07/09/2024 09:48:20 devpinoyLogger Typing in : txt_PostCode entered value as A234wd
+07/09/2024 09:48:20 devpinoyLogger Clicking on an Element : btn_Addcustomer
+07/09/2024 09:48:20 devpinoyLogger Customer has been added and verified over the alert
+07/09/2024 09:48:20 devpinoyLogger Customer has been added
+07/09/2024 09:48:20 devpinoyLogger Clicking on an Element : btn_AddCustomer
+07/09/2024 09:48:20 devpinoyLogger Typing in : txt_FirstName entered value as Ratan
+07/09/2024 09:48:21 devpinoyLogger Typing in : txt_LastName entered value as Tata
+07/09/2024 09:48:21 devpinoyLogger Typing in : txt_PostCode entered value as A234wd
+07/09/2024 09:48:21 devpinoyLogger Clicking on an Element : btn_Addcustomer
+07/09/2024 09:48:21 devpinoyLogger Customer has been added and verified over the alert
+07/09/2024 09:48:21 devpinoyLogger Customer has been added
+07/09/2024 09:48:21 devpinoyLogger Clicking on an Element : btn_AddCustomer
+07/09/2024 09:48:21 devpinoyLogger Typing in : txt_FirstName entered value as Mukesh
+07/09/2024 09:48:21 devpinoyLogger Typing in : txt_LastName entered value as Ambani
+07/09/2024 09:48:22 devpinoyLogger Typing in : txt_PostCode entered value as A234wd
+07/09/2024 09:48:22 devpinoyLogger Clicking on an Element : btn_Addcustomer
+07/09/2024 09:48:22 devpinoyLogger Customer has been added and verified over the alert
+07/09/2024 09:48:22 devpinoyLogger Customer has been added
+07/09/2024 09:48:22 devpinoyLogger Clicking on an Element : btn_AddCustomer
+07/09/2024 09:48:22 devpinoyLogger Typing in : txt_FirstName entered value as Gautam
+07/09/2024 09:48:22 devpinoyLogger Typing in : txt_LastName entered value as Adani
+07/09/2024 09:48:23 devpinoyLogger Typing in : txt_PostCode entered value as A234wd
+07/09/2024 09:48:23 devpinoyLogger Clicking on an Element : btn_Addcustomer
+07/09/2024 09:48:23 devpinoyLogger Customer has been added and verified over the alert
+07/09/2024 09:48:23 devpinoyLogger Customer has been added
+07/09/2024 09:48:23 devpinoyLogger Clicking on an Element : btn_OpenAccount
+07/09/2024 09:48:23 devpinoyLogger Selecting the dropdown value from : drp_Customer entered value as Krupal Chavda
+07/09/2024 09:48:23 devpinoyLogger Selecting the dropdown value from : drp_Currency entered value as Rupee
+07/09/2024 09:48:23 devpinoyLogger Clicking on an Element : btn_Process
+07/09/2024 09:48:24 devpinoyLogger Test Execution completed

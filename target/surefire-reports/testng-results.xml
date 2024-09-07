@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-16T19:38:34 IST" name="Data Driven Basics" finished-at="2024-08-16T19:38:38 IST" duration-ms="3106">
+  <suite started-at="2024-09-07T09:48:18 IST" name="Data Driven Basics" finished-at="2024-09-07T09:48:23 IST" duration-ms="5529">
     <groups>
     </groups>
-    <test started-at="2024-08-16T19:38:34 IST" name="Bank Manager Login Test" finished-at="2024-08-16T19:38:35 IST" duration-ms="216">
+    <test started-at="2024-09-07T09:48:18 IST" name="Bank Manager Login Test" finished-at="2024-09-07T09:48:18 IST" duration-ms="322">
       <class name="com.kbc.testcases.BankManagerLoginTest">
-        <test-method signature="bankManagerLoginTest()[pri:0, instance:com.kbc.testcases.BankManagerLoginTest@250b236d]" started-at="2024-08-16T19:38:34 IST" name="bankManagerLoginTest" finished-at="2024-08-16T19:38:35 IST" duration-ms="179" status="PASS">
+        <test-method signature="bankManagerLoginTest()[pri:0, instance:com.kbc.testcases.BankManagerLoginTest@61f3fbb8]" started-at="2024-09-07T09:48:18 IST" name="bankManagerLoginTest" finished-at="2024-09-07T09:48:18 IST" duration-ms="268" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bankManagerLoginTest -->
       </class> <!-- com.kbc.testcases.BankManagerLoginTest -->
     </test> <!-- Bank Manager Login Test -->
-    <test started-at="2024-08-16T19:38:35 IST" name="Add Cutomer Test" finished-at="2024-08-16T19:38:37 IST" duration-ms="1701">
+    <test started-at="2024-09-07T09:48:19 IST" name="Add Cutomer Test" finished-at="2024-09-07T09:48:23 IST" duration-ms="3916">
       <class name="com.kbc.testcases.AddCustomerTest">
-        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:com.kbc.testcases.AddCustomerTest@1e6cc850]" started-at="2024-08-16T19:38:35 IST" name="addCustomerTest" data-provider="dp" finished-at="2024-08-16T19:38:35 IST" duration-ms="393" status="PASS">
+        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:com.kbc.testcases.AddCustomerTest@7e7f0f0a]" started-at="2024-09-07T09:48:19 IST" name="addCustomerTest" data-provider="dp" finished-at="2024-09-07T09:48:20 IST" duration-ms="1291" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,7 +26,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:com.kbc.testcases.AddCustomerTest@1e6cc850]" started-at="2024-08-16T19:38:35 IST" name="addCustomerTest" data-provider="dp" finished-at="2024-08-16T19:38:36 IST" duration-ms="432" status="PASS">
+        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:com.kbc.testcases.AddCustomerTest@7e7f0f0a]" started-at="2024-09-07T09:48:20 IST" name="addCustomerTest" data-provider="dp" finished-at="2024-09-07T09:48:21 IST" duration-ms="754" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:com.kbc.testcases.AddCustomerTest@1e6cc850]" started-at="2024-08-16T19:38:36 IST" name="addCustomerTest" data-provider="dp" finished-at="2024-08-16T19:38:36 IST" duration-ms="414" status="PASS">
+        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:com.kbc.testcases.AddCustomerTest@7e7f0f0a]" started-at="2024-09-07T09:48:21 IST" name="addCustomerTest" data-provider="dp" finished-at="2024-09-07T09:48:22 IST" duration-ms="820" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -48,7 +48,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomerTest -->
-        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:com.kbc.testcases.AddCustomerTest@1e6cc850]" started-at="2024-08-16T19:38:36 IST" name="addCustomerTest" data-provider="dp" finished-at="2024-08-16T19:38:37 IST" duration-ms="449" status="PASS">
+        <test-method signature="addCustomerTest(java.util.Hashtable)[pri:0, instance:com.kbc.testcases.AddCustomerTest@7e7f0f0a]" started-at="2024-09-07T09:48:22 IST" name="addCustomerTest" data-provider="dp" finished-at="2024-09-07T09:48:23 IST" duration-ms="1030" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -61,13 +61,13 @@
         </test-method> <!-- addCustomerTest -->
       </class> <!-- com.kbc.testcases.AddCustomerTest -->
     </test> <!-- Add Cutomer Test -->
-    <test started-at="2024-08-16T19:38:37 IST" name="Open Account Test" finished-at="2024-08-16T19:38:38 IST" duration-ms="874">
+    <test started-at="2024-09-07T09:48:23 IST" name="Open Account Test" finished-at="2024-09-07T09:48:23 IST" duration-ms="673">
       <class name="com.kbc.testcases.OpenAccountTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.kbc.testcases.OpenAccountTest@656d10a4]" started-at="2024-08-16T19:38:30 IST" name="setup" finished-at="2024-08-16T19:38:34 IST" duration-ms="4727" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.kbc.testcases.OpenAccountTest@63ec445c]" started-at="2024-09-07T09:48:16 IST" name="setup" finished-at="2024-09-07T09:48:18 IST" duration-ms="2355" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="openAccountTest(java.util.Hashtable)[pri:0, instance:com.kbc.testcases.OpenAccountTest@656d10a4]" started-at="2024-08-16T19:38:37 IST" name="openAccountTest" data-provider="dp" finished-at="2024-08-16T19:38:38 IST" duration-ms="872" status="PASS">
+        <test-method signature="openAccountTest(java.util.Hashtable)[pri:0, instance:com.kbc.testcases.OpenAccountTest@63ec445c]" started-at="2024-09-07T09:48:23 IST" name="openAccountTest" data-provider="dp" finished-at="2024-09-07T09:48:23 IST" duration-ms="662" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -78,7 +78,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openAccountTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.kbc.testcases.OpenAccountTest@656d10a4]" started-at="2024-08-16T19:38:38 IST" name="teardown" finished-at="2024-08-16T19:38:39 IST" duration-ms="1054" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.kbc.testcases.OpenAccountTest@63ec445c]" started-at="2024-09-07T09:48:24 IST" name="teardown" finished-at="2024-09-07T09:48:24 IST" duration-ms="231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

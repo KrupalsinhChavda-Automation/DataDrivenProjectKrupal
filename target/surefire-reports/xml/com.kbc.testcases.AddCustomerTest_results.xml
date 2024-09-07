@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.688">
+           time="3.895">
   <properties />
   
   
-            <testcase name="addCustomerTest" time="0.393" classname="com.kbc.testcases.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="0.449" classname="com.kbc.testcases.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="0.432" classname="com.kbc.testcases.AddCustomerTest" />
-                <testcase name="addCustomerTest" time="0.414" classname="com.kbc.testcases.AddCustomerTest" />
+            <testcase name="addCustomerTest" time="0.820" classname="com.kbc.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="0.754" classname="com.kbc.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="1.030" classname="com.kbc.testcases.AddCustomerTest" />
+                <testcase name="addCustomerTest" time="1.291" classname="com.kbc.testcases.AddCustomerTest" />
       
 </testsuite>

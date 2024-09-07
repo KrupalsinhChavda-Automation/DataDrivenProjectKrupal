@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="1.446" tests="6" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="2.23" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="jansi.mode" value="force"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -26,7 +26,7 @@
     <property name="user.variant" value=""/>
     <property name="stderr.encoding" value="UTF-8"/>
     <property name="os.name" value="Windows 11"/>
-    <property name="classworlds.conf" value="K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf8738860746759193972.tmp"/>
+    <property name="classworlds.conf" value="K:\Krupal_QA\QA_Automation\Workplaces\Live_Projects\Krupal\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf18326564723411062538.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="stdout.encoding" value="UTF-8"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-21\bin;K:\Krupal QA\Tools\apache-maven-3.9.6-bin\bin;K:\Krupal QA\Tools\allure-2.29.0\bin;C:\Program Files\Git\cmd;C:\Users\krupa\AppData\Local\Microsoft\WindowsApps;C:\ffmpeg\bin;C:\Users\krupa\AppData\Local\GitHubDesktop\bin;."/>
@@ -58,13 +58,13 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="m2e.build.project.data.socket.port" value="55741"/>
+    <property name="m2e.build.project.data.socket.port" value="55311"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="bankManagerLoginTest" classname="com.kbc.testcases.BankManagerLoginTest" time="0.183"/>
-  <testcase name="addCustomerTest" classname="com.kbc.testcases.AddCustomerTest" time="0.392"/>
-  <testcase name="addCustomerTest" classname="com.kbc.testcases.AddCustomerTest" time="0.434"/>
-  <testcase name="addCustomerTest" classname="com.kbc.testcases.AddCustomerTest" time="0.415"/>
-  <testcase name="addCustomerTest" classname="com.kbc.testcases.AddCustomerTest" time="0.45"/>
-  <testcase name="openAccountTest" classname="com.kbc.testcases.OpenAccountTest" time="0.871"/>
+  <testcase name="bankManagerLoginTest" classname="com.kbc.testcases.BankManagerLoginTest" time="0.272"/>
+  <testcase name="addCustomerTest" classname="com.kbc.testcases.AddCustomerTest" time="1.291"/>
+  <testcase name="addCustomerTest" classname="com.kbc.testcases.AddCustomerTest" time="0.754"/>
+  <testcase name="addCustomerTest" classname="com.kbc.testcases.AddCustomerTest" time="0.821"/>
+  <testcase name="addCustomerTest" classname="com.kbc.testcases.AddCustomerTest" time="1.034"/>
+  <testcase name="openAccountTest" classname="com.kbc.testcases.OpenAccountTest" time="0.667"/>
 </testsuite>
