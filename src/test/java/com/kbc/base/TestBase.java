@@ -4,8 +4,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,6 +15,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -46,7 +48,95 @@ public class TestBase {
 			System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\testdata.xlsx");
 	public static WebDriverWait wait;
 	public static String browser;
+	
+	
 
+	@BeforeSuite
+	public void setup() {
+
+		// Properties file setup to call and use in runtime in the test case
+		if (driver == null) {
+			try {
+				fis = new FileInputStream(
+						System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\Config.properties");
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				config.load(fis);
+				log.debug("Config file loaded!!!");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				fis = new FileInputStream(
+						System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\OR.properties");
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				OR.load(fis);
+				log.debug("OR file loaded!!!");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			// For Jenkins logic
+			if (System.getenv("browser") != null && !System.getenv("browser").isEmpty()) {
+
+				browser = System.getenv("browser");
+			} else {
+				browser = config.getProperty("browser");
+			}
+
+			config.setProperty("browser", browser);
+
+			// Browser selection
+			if (config.getProperty("browser").equals("chrome")) {
+
+				Map<String, Object> prefs = new HashMap<String, Object>();
+				prefs.put("profile.default_content_setting_values.notifications", 2);
+				prefs.put("credentials_enable_service", false);
+				prefs.put("profile.password_manager_enabled", false);
+				ChromeOptions options = new ChromeOptions();
+				options.setExperimentalOption("prefs", prefs);
+				options.addArguments("--disable-extensions");
+				options.addArguments("--disable-infobars");
+
+				driver = new ChromeDriver(options);
+
+				log.debug("Chrome lounched");
+			} else if (config.getProperty("browser").equals("firefox")) {
+
+				driver = new FirefoxDriver();
+			}
+
+			driver.get(config.getProperty("testurl"));
+			log.debug("Navigated to: " + config.getProperty("testurl"));
+			driver.manage().window().maximize();
+			driver.manage().timeouts()
+					.implicitlyWait(Duration.ofSeconds(Integer.parseInt(config.getProperty("expict_wait"))));
+			wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.parseInt(config.getProperty("expict_wait"))));
+		}
+
+	}
+	
+
+	@AfterSuite
+	public void teardown() {
+
+		if (driver != null) {
+			driver.quit();
+		}
+		log.debug("Test Execution completed");
+
+	}
+	
+	//Common Keywords
 	/* Reusable Keywords Click() */
 	public static void click(String locatorKey) {
 		try {
@@ -143,79 +233,6 @@ public class TestBase {
 					"<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
 					MediaEntityBuilder.createScreenCaptureFromPath(ScreenPath).build());
 		}
-
-	}
-
-	@BeforeSuite
-	public void setup() {
-
-		// Properties file setup to call and use in runtime in the test case
-		if (driver == null) {
-			try {
-				fis = new FileInputStream(
-						System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\Config.properties");
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			try {
-				config.load(fis);
-				log.debug("Config file loaded!!!");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			try {
-				fis = new FileInputStream(
-						System.getProperty("user.dir") + "\\src\\test\\resources\\properties\\OR.properties");
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			try {
-				OR.load(fis);
-				log.debug("OR file loaded!!!");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-			// For Jenkins logic
-			if (System.getenv("browser") != null && !System.getenv("browser").isEmpty()) {
-
-				browser = System.getenv("browser");
-			} else {
-				browser = config.getProperty("browser");
-			}
-
-			config.setProperty("browser", browser);
-
-			// Browser selection
-			if (config.getProperty("browser").equals("chrome")) {
-				driver = new ChromeDriver();
-				log.debug("Chrome lounched");
-			} else if (config.getProperty("browser").equals("firefox")) {
-
-				driver = new FirefoxDriver();
-			}
-
-			driver.get(config.getProperty("testurl"));
-			log.debug("Navigated to: " + config.getProperty("testurl"));
-			driver.manage().window().maximize();
-			driver.manage().timeouts()
-					.implicitlyWait(Duration.ofSeconds(Integer.parseInt(config.getProperty("expict_wait"))));
-			wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.parseInt(config.getProperty("expict_wait"))));
-		}
-
-	}
-
-	@AfterSuite
-	public void teardown() {
-
-		if (driver != null) {
-			driver.quit();
-		}
-		log.debug("Test Execution completed");
 
 	}
 }
