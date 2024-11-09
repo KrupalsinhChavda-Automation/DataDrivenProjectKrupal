@@ -1,4 +1,41 @@
-12:17:46,765 DEBUG devpinoyLogger:68 - Config file loaded!!!
-12:17:46,768 DEBUG devpinoyLogger:82 - OR file loaded!!!
-12:17:48,592 DEBUG devpinoyLogger:112 - Chrome lounched
-12:17:50,252 DEBUG devpinoyLogger:119 - Navigated to: https://www.way2automation.com/angularjs-protractor/banking/#/login
+12:26:34,533 DEBUG devpinoyLogger:68 - Config file loaded!!!
+12:26:34,537 DEBUG devpinoyLogger:82 - OR file loaded!!!
+12:26:36,754 DEBUG devpinoyLogger:112 - Chrome lounched
+12:26:37,310 DEBUG devpinoyLogger:119 - Navigated to: https://www.way2automation.com/angularjs-protractor/banking/#/login
+12:26:37,479 DEBUG devpinoyLogger:21 - Lunching the login test
+12:26:37,586  INFO devpinoyLogger:144 - Clicking on an Element : btn_Login
+12:26:37,681  INFO devpinoyLogger:197 - Element is present : By.xpath: //button[@ng-class='btnClass1']
+12:26:37,689 DEBUG devpinoyLogger:26 - Login Successfully!!
+12:26:38,279  INFO devpinoyLogger:144 - Clicking on an Element : btn_AddCustomer
+12:26:38,609  INFO devpinoyLogger:161 - Typing in : txt_FirstName entered value as Krupal
+12:26:38,817  INFO devpinoyLogger:161 - Typing in : txt_LastName entered value as Chavda
+12:26:39,018  INFO devpinoyLogger:161 - Typing in : txt_PostCode entered value as A234wd
+12:26:39,260  INFO devpinoyLogger:144 - Clicking on an Element : btn_Addcustomer
+12:26:39,282 DEBUG devpinoyLogger:56 - Customer has been added and verified over the alert
+12:26:39,301 DEBUG devpinoyLogger:64 - Customer has been added
+12:26:39,509  INFO devpinoyLogger:144 - Clicking on an Element : btn_AddCustomer
+12:26:39,755  INFO devpinoyLogger:161 - Typing in : txt_FirstName entered value as Ratan
+12:26:39,909  INFO devpinoyLogger:161 - Typing in : txt_LastName entered value as Tata
+12:26:40,081  INFO devpinoyLogger:161 - Typing in : txt_PostCode entered value as A234wd
+12:26:40,177  INFO devpinoyLogger:144 - Clicking on an Element : btn_Addcustomer
+12:26:40,198 DEBUG devpinoyLogger:56 - Customer has been added and verified over the alert
+12:26:40,216 DEBUG devpinoyLogger:64 - Customer has been added
+12:26:40,403  INFO devpinoyLogger:144 - Clicking on an Element : btn_AddCustomer
+12:26:40,716  INFO devpinoyLogger:161 - Typing in : txt_FirstName entered value as Mukesh
+12:26:40,874  INFO devpinoyLogger:161 - Typing in : txt_LastName entered value as Ambani
+12:26:41,033  INFO devpinoyLogger:161 - Typing in : txt_PostCode entered value as A234wd
+12:26:41,167  INFO devpinoyLogger:144 - Clicking on an Element : btn_Addcustomer
+12:26:41,188 DEBUG devpinoyLogger:56 - Customer has been added and verified over the alert
+12:26:41,207 DEBUG devpinoyLogger:64 - Customer has been added
+12:26:41,394  INFO devpinoyLogger:144 - Clicking on an Element : btn_AddCustomer
+12:26:41,779  INFO devpinoyLogger:161 - Typing in : txt_FirstName entered value as Gautam
+12:26:41,985  INFO devpinoyLogger:161 - Typing in : txt_LastName entered value as Adani
+12:26:42,324  INFO devpinoyLogger:161 - Typing in : txt_PostCode entered value as A234wd
+12:26:42,469  INFO devpinoyLogger:144 - Clicking on an Element : btn_Addcustomer
+12:26:42,503 DEBUG devpinoyLogger:56 - Customer has been added and verified over the alert
+12:26:42,533 DEBUG devpinoyLogger:64 - Customer has been added
+12:26:42,779  INFO devpinoyLogger:144 - Clicking on an Element : btn_OpenAccount
+12:26:43,125  INFO devpinoyLogger:182 - Selecting the dropdown value from : drp_Customer entered value as Krupal Chavda
+12:26:43,360  INFO devpinoyLogger:182 - Selecting the dropdown value from : drp_Currency entered value as Rupee
+12:26:43,494  INFO devpinoyLogger:144 - Clicking on an Element : btn_Process
+12:26:43,872 DEBUG devpinoyLogger:135 - Test Execution completed
